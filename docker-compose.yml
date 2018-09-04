@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  httpd:
+    volumes:
+        - '${PWD}/html:/usr/local/apache2/htdocs/:ro'
+    ports:
+      - 80:80
+    build: ./
+    restart: always
